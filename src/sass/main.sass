@@ -48,26 +48,39 @@ header
 	font-weight: 500
 	line-height: 22.5px
 
+.menu-item__link.active
+	color: #FE9013
+
 .main
 	width: 100%
 	height: 700px
 	position: relative
+
+.main.donate-main
+	height: 390px
+	width: 100%
+
+.main.donate-main
+	padding: 0
 
 .main-background
 	width: 100%
 	height: 100%
 	overflow: hidden
 
+
+
 .main-background__image
 	width: 100%
 	height: 100%
 	object-fit: cover
+	display: block
 
 .main-button
 	margin: 0
 	position: absolute
-	top: 546px
-	left: 983px
+	top: 536px
+	left: 963px
 
 .main-button__link
 	background: #FE9013
@@ -87,7 +100,7 @@ header
 .main-description__background
 	position: absolute
 	top: 12px
-	left: 807px
+	left: 817px
 	width: 465px
 	height: 465px
 	border-radius: 50%
@@ -95,8 +108,8 @@ header
 
 .main-text
 	position: absolute
-	top: 86px
-	left: 880px
+	top: 92px
+	left: 860px
 	font-size: 106px
 	color: #fff
 	font-weight: 700
@@ -122,7 +135,7 @@ header
 	height: 400px
 	width: 1160
 	display: flex
-	margin: 140px 0
+	margin: 140px 0 180px 0
 
 .about-image
 	width: 610px
@@ -136,7 +149,7 @@ header
 
 .about-description
 	width: 465px
-	margin-left: 95px
+	margin-left: 87px
 
 .about-description__title
 	font-size: 48px
@@ -213,7 +226,10 @@ header
 
 .single-card
 	width: 366px
-	margin-bottom: 31px
+	margin-bottom: 20px
+
+.single-card:nth-child(4),.single-card:nth-child(5), .single-card:nth-child(6)
+	margin-bottom: 0
 
 .single-card:hover .card-background__image
 	transform: scale(1.1)
@@ -261,7 +277,7 @@ header
 
 
 .cards-button
-	margin: 50px 0 0 0
+	margin: 80px 0 0 0
 
 .cards-button__link
 	background: #FE9013
@@ -299,6 +315,7 @@ header
 
 .payment-inner
 	width: 1160px
+	height: 835px
 	background: #FEE8D3
 	border-radius: 20px
 	display: flex
@@ -327,7 +344,7 @@ header
 	font-size: 36px
 	font-weight: 47px
 	font-weight: 400
-	margin: 0 0 40px 0
+	margin: 60px 0 40px 0
 	text-align: center
 
 .payment-container
@@ -361,7 +378,7 @@ header
 	margin-top: 66.5px					
 
 .payment-button
-	margin: 50px auto 50px auto
+	margin: 60px auto 60px auto
 
 .payment-button__link
 	background: #FE9013
@@ -490,7 +507,9 @@ header
 
 footer	
 	background: #111115
-	padding: 40px 0
+	padding: 35px 0 40px 0
+	display: flex
+	justify-content: center
 
 .footer-container
 	width: 1160px
@@ -505,6 +524,9 @@ footer
 	display: block
 	width: 82px
 	height: 52px
+
+.footer-block__subscribe
+	margin-left: -5px
 
 .subscribe-form
 	margin-top: 15px
@@ -523,6 +545,7 @@ footer
 	border-radius: 2px
 	font-size: 16px
 	padding: 10px 7px 10px 10px 
+	background: transparent
 
 
 .subscribe-form__button
@@ -537,10 +560,10 @@ footer
 
 .footer-button
 	width: 1160px
-	margin: 0 auto 45px 0
+	margin: 0 auto 40px 0
 
 .footer-social
-	margin: 0
+	margin: 0 62px 0 0
 	padding: 0
 	list-style-type: none
 
@@ -600,7 +623,14 @@ footer
 	color: #fff
 	text-decoration: none
 	line-height: 21px
-	font-size: 16px			
+	font-size: 16px	
+	transition: .2s ease		
+
+.footer-nav__link.active
+	color: #FE9013
+
+.footer-nav__link:hover
+	color: #FE9013
 
 .footer-credentials
 	height: 52px
@@ -656,7 +686,7 @@ footer
 	border-radius: 20px
 	display: flex
 	flex-direction: column
-	padding: 40px 92px 160px 92px
+	padding: 40px 92px 60px 92px
 	margin: 0 auto
 
 .donate-main__title
@@ -804,3 +834,373 @@ footer
 	font-size: 16px
 	line-height: 23px
 	margin-bottom: 10px
+
+.animal
+	padding: 40px 0 180px 0
+	position: relative
+	overflow: hidden
+
+.animal-about
+	width: 1160px
+	margin: 0 auto 0 auto
+	display: flex
+
+
+.animal-thumbnail__picture
+	width: 422px
+	height: 422px
+	object-fit: cover
+	display: block
+
+.animal-description
+	padding: 0 0 0 70px
+
+.animal-description__text
+	font-size: 26px
+	line-height: 36px
+	font-weight: 500
+	color: #ABABAB
+	margin: 0
+
+.animal-button
+	margin: 40px 0 0 0
+
+.animal-button__link
+	background: #FE9013
+	height: 54px
+	width: 298px
+	color: #fff
+	text-align: center
+	display: flex
+	justify-content: center
+	align-items: center	
+	text-decoration: none
+	border-radius: 27px
+	font-size: 16px
+	line-height: 23px
+	text-transform: uppercase	
+
+.animal-text__highlight
+	color: #FE9013
+
+.animal-title
+	font-size: 48px
+	margin: 140px auto 20px auto
+	line-height: 58px
+	font-weight: 500
+	width: 1160px
+	color: #FE9013
+
+.animal__line
+	border: 1px solid  #767474
+	width: 1160px
+	margin: 0 auto
+	margin-top: 20px
+	margin-bottom: 48px
+
+.animal__info
+	width: 1160px
+	margin: 0 auto			
+
+.animal-info__line
+	margin-bottom: 20px
+
+.animal-line__title
+	font-weight: 400
+	font-size: 24px
+	line-height: 29px
+
+.animal-block
+	margin-bottom: 30px
+
+.animal-block__header
+	font-weight: 400
+	font-size: 24px
+	line-height: 29px
+	margin: 0 0 10px 0
+
+.animal-read
+	width: 1160px
+	margin: 40px auto 0	
+
+.animal-read__link
+	border: 1px solid #333B41
+	height: 42px
+	width: 130px
+	border-radius: 5px
+	display: flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	cursor: pointer
+	text-decoration: none
+	color: #000
+
+.animal-header
+	font-size: 48px
+	font-weight: 400
+	line-height: 56px
+	color: #333B41
+	width: 1160px
+	margin: 0 auto 10px auto
+
+.animal-video
+	width: 1160px
+	height: 652px
+	margin: 0 auto 80px auto
+	position: relative
+
+.animal-video__image
+	height: 100%
+	width: 100%
+	object-fit: cover
+	object-position: center	
+
+.animal-gallery
+	width: 1160px
+	margin: 0 auto
+	display: flex
+	justify-content: space-between
+	position: relative
+
+.animal-sidebar
+	position: absolute
+	top: 0
+	left: -190px
+	width: 100px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	align-items: center
+	padding: 16px 0
+	height: 652px
+	background: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%)	
+
+.animal-sidebar__item
+	cursor: pointer
+
+.gallery-nav__left
+	position: absolute
+	left: -82px
+	top: 50%
+	transform: translate(0,calc(-50%))
+	width: 62px
+	height: 62px
+	background: #FC8929
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer
+
+.gallery-nav__right
+	position: absolute
+	right: -82px
+	top: 50%	
+	transform: translate(0,calc(-50%))
+	width: 62px
+	height: 62px
+	background: #FC8929	
+	border-radius: 50%
+	display: flex
+	align-items: center
+	justify-content: center
+	cursor: pointer	
+
+.gallery-nav__right img, .gallery-nav__right img
+	transition: .2s all
+
+.gallery-nav__left:hover img, .gallery-nav__right:hover img
+	transform: scale(1.1)
+
+
+.gallery-item
+	width: 268px
+	height: 210px
+	overflow: hidden
+
+.gallery-item__image
+	width: 100%	 
+	height: 100%
+	object-fit: cover
+	object-position: center						
+
+.animal-donate
+	width: 100%
+	height: 390px
+	overflow: hidden
+	position: relative
+
+.animal-donate__image
+	width: 100%
+	height: 100%
+	object-fit: cover
+
+
+.animal-donate__button
+	position: absolute
+	bottom: 60px
+	left: 50%
+	transform: translate(-50%,0)
+
+.animal-donate__link
+	background: #FE9013
+	height: 54px
+	width: 298px
+	color: #fff
+	text-align: center
+	display: flex
+	justify-content: center
+	align-items: center	
+	text-decoration: none
+	border-radius: 27px
+	font-size: 16px
+	line-height: 23px
+	text-transform: uppercase
+
+.animal-decor__left
+	position: absolute
+	bottom: 0
+	left: 0
+
+.animal-decor__right
+	position: absolute
+	bottom: -180px
+	right: -70px
+	transform: rotate(-10deg)
+
+.map
+	width: 100%
+	display: flex
+	align-items: flex-end
+	justify-content: flex-end
+
+
+.map-buttons
+	height: 118px
+	width: 54px
+	display: none
+	flex-direction: column
+	justify-content: center
+
+.map-buttons div
+	width: 54px
+	height: 59px
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+
+.map-buttons div img
+	transition: .2s ease
+
+.map-buttons div:hover img
+	transform: scale(1.1)
+
+.map-container
+	width: 1083px
+	height: 714px
+	overflow: hidden
+	margin: 103px auto 120px auto
+	position: relative
+
+.map-container__image
+	width: 100%
+	height: 100%
+	object-fit: cover
+	display: block
+
+
+.map-container__icon
+	cursor: pointer
+
+.wrapper__eagle1
+	top: 360px
+	left: 90px
+
+.wrapper__eagle2
+	top: 390px
+	left: 120px
+
+.wrapper__gorillas
+	top: 490px
+	left: 530px	
+
+.wrapper__crocodile
+	top: 415px
+	left: 230px		
+
+.wrapper__panda
+	top: 315px
+	left: 820px
+
+.wrapper__pandas
+	top: 380px
+	left: 795px
+
+.wrapper__eagle1 .map-wrapper__descr
+	top: 30px
+	left: -100px
+
+.wrapper__eagle2 .map-wrapper__descr
+	top: 20px
+	left: 0
+
+.wrapper__gorillas .map-wrapper__descr
+	top: 30px
+	left: 0	
+
+.wrapper__crocodile .map-wrapper__descr
+	top: 20px
+	left: 0	
+
+.wrapper__panda .map-wrapper__descr
+	top: -30px
+	left: 30px	
+
+.wrapper__pandas .map-wrapper__descr
+	top: 30px
+	left: -20px	
+
+.map-wrapper
+	position: absolute				
+
+.map-wrapper:hover .map-wrapper__descr
+	display: block
+
+.map-wrapper__descr:hover
+	display: block
+
+.map-wrapper__descr
+	z-index: 999
+	position: absolute
+	padding: 16px 10px
+	width: 158px
+	height: 116px
+	border-radius: 5px
+	border: 1px solid #111
+	background: #fff
+	display: none
+
+.map-popup__text
+	margin: 0 0 11px 0
+	font-size: 16px
+	line-height: 23px
+
+.map-popup__text:before
+	content: ''
+	position: absolute
+
+.map-popup__button
+	display: flex
+	align-items: center
+	justify-content: center
+	margin: 0 auto
+	width: 135px
+	height: 31px
+	border-radius: 5px
+	background: #F1F3F2
+	color: #4B9200
+	text-decoration: none
+
+
