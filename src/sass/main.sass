@@ -51,6 +51,9 @@ header
 .menu-item__link.active
 	color: #FE9013
 
+.menu-item__link:hover
+	color: #FE9013
+
 .main
 	width: 100%
 	height: 700px
@@ -203,6 +206,7 @@ header
 	align-items: center
 	justify-content: center
 	cursor: pointer
+	transition: .2s all
 
 .cards-nav__right
 	position: absolute
@@ -216,7 +220,11 @@ header
 	display: flex
 	align-items: center
 	justify-content: center
-	cursor: pointer	
+	cursor: pointer
+	transition: .2s all
+
+.cards-nav__right:hover, .cards-nav__left:hover
+	background: #FFA545
 
 .cards-nav__right img, .cards-nav__right img
 	transition: .2s all
@@ -473,18 +481,78 @@ header
 .testimonials-scroll
 	width: 600px
 	height: 8px
-	border-radius: 5px
-	border: 1px solid #FEBDAB
 	margin: 20px auto 30px
 	background: #F5F7F6
 
-
 .scroll-outer
-	width: 115px
+	width: 100%
 	height: 6px
 	background: #FE9013
 	border-radius: 5px
 	cursor: pointer
+	border-radius: 5px
+	border: 1px solid #FEBDAB
+
+.scroll-outer:active
+	color: #FFA545 	
+
+input[type=range] 
+	-webkit-appearance: none
+	width: 100%
+	background: transparent
+
+
+input[type=range]::-webkit-slider-thumb 
+	-webkit-appearance: none
+
+
+input[type=range]:focus 
+	outline: none
+
+
+input[type=range]::-ms-track 
+	width: 100%
+	cursor: pointer
+	background: transparent 
+	border-color: transparent
+	color: transparent
+
+input[type=range]::-webkit-slider-thumb:active
+	background: #FFA545
+
+input[type=range]::-moz-range-thumb
+	background: #FFA545
+
+input[type=range]::-ms-thumb
+	background: #FFA545	
+
+input[type=range]::-webkit-slider-thumb
+	-webkit-appearance: none
+	border: 1px solid #FE9013 
+	height: 6px
+	width: 115px
+	border-radius: 3px
+	background: #FE9013 
+	cursor: pointer
+	margin-top: 0
+
+input[type=range]::-moz-range-thumb
+	border: 1px solid #FE9013 
+	height: 6px
+	width: 115px
+	border-radius: 3px
+	background: #FE9013 
+	cursor: pointer
+
+input[type=range]::-ms-thumb
+	border: 1px solid #FE9013 
+	height: 6px
+	width: 115px
+	border-radius: 3px
+	background: #FE9013 
+	cursor: pointer
+
+
 
 .testimonials-button
 	width: 1160px
@@ -723,7 +791,37 @@ footer
 	width: 10px
 	height: 10px
 	border-radius: 50%
-	z-index: 1	
+	z-index: 1
+	position: relative	
+	transition: .2s ease
+	cursor: pointer
+
+.donate-progress__circle.active:before, .donate-progress__circle:hover:before
+	content: ''
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background: transparent
+	border: 1px solid #FE9013
+	width: 24px
+	height: 24px
+	border-radius: 50%
+
+.donate-progress__circle.active:after,.donate-progress__circle:hover:after
+	content: ''
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%,-50%)
+	background: transparent
+	border: 1px solid #FE9013
+	width: 38px
+	height: 38px
+	border-radius: 50%
+
+
+
 
 .donate-milestones
 	width: 976px
@@ -935,6 +1033,10 @@ footer
 	cursor: pointer
 	text-decoration: none
 	color: #000
+	transition: .2s ease
+
+.animal-read__link:hover
+	background: #FFA545
 
 .animal-header
 	font-size: 48px
@@ -1203,4 +1305,6 @@ footer
 	color: #4B9200
 	text-decoration: none
 
-
+.txt__link
+	color: #FE9013
+	text-decoration: none
