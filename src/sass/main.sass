@@ -234,7 +234,8 @@ header
 
 .single-card
 	width: 366px
-	margin-bottom: 20px
+	margin-bottom: 80px
+	position: relative
 
 .single-card:nth-child(4),.single-card:nth-child(5), .single-card:nth-child(6)
 	margin-bottom: 0
@@ -257,7 +258,14 @@ header
 	height: 100%
 	object-fit: cover
 
+.single-card:hover .card-description
+	height: 180px
+
 .card-description
+	background: white
+	position: absolute
+	transition: .2s ease
+	bottom: -60px
 	height: 60px	
 	width: 100%
 	border-bottom-left-radius: 5px
@@ -1048,7 +1056,7 @@ footer
 
 .animal-video
 	width: 1160px
-	height: 652px
+	max-height: 652px
 	margin: 0 auto 80px auto
 	position: relative
 
@@ -1057,6 +1065,15 @@ footer
 	width: 100%
 	object-fit: cover
 	object-position: center	
+
+.animal-video__main
+	width: 1160px
+	height: 652px
+	position: relative
+	iframe
+		width: 100%
+		height: 652px
+		object-fit: cover
 
 .animal-gallery
 	width: 1160px
@@ -1067,6 +1084,7 @@ footer
 
 .animal-sidebar
 	position: absolute
+	z-index: 1
 	top: 0
 	left: -190px
 	width: 100px
@@ -1176,12 +1194,17 @@ footer
 	display: flex
 	align-items: flex-end
 	justify-content: flex-end
+	background: url('../images/map_fone.png')
+	background-repeat: repeat
+	position: relative
 
 
 .map-buttons
+	position: absolute
+	bottom: 40px
+	right: 40px
 	height: 118px
 	width: 54px
-	display: none
 	flex-direction: column
 	justify-content: center
 
