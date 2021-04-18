@@ -237,6 +237,25 @@ header
 	margin-bottom: 80px
 	position: relative
 
+.single-card:hover .single-card__hover
+	background: rgba(51,51,51,0.8)
+	opacity: 1
+
+.single-card__hover
+	position: absolute
+	top: 0
+	left: 0
+	width: 366px
+	height: 366px
+	background: rgba(51,51,51,0)
+	opacity: 0
+	color: #fff
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	transition: .2s ease
+
 .single-card:nth-child(4),.single-card:nth-child(5), .single-card:nth-child(6)
 	margin-bottom: 0
 
@@ -257,9 +276,6 @@ header
 	width: 100%
 	height: 100%
 	object-fit: cover
-
-.single-card:hover .card-description
-	height: 180px
 
 .card-description
 	background: white
