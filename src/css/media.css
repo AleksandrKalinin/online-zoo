@@ -378,6 +378,32 @@
 
 @media only screen and (max-width : 640px) {
 
+	.payment-image{
+		position: relative;
+	}
+
+	.payment-image:before{
+		position: absolute;
+		content: url('../../build/images/arrow-regular.png');
+		top: -15px;
+		left: -73px;
+	}
+
+	.payment-item:nth-child(1) .payment-image:before{
+		display: none;
+	}
+
+	.header-inner{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.burger{
+		display: block;
+		cursor: pointer;
+	}
+
 	/* main */
 
 	header{
@@ -1036,8 +1062,29 @@
 	}
 
 	.payment{
-		display: none;
+		
 	}
+
+	.payment-image{
+		position: relative;
+	}
+
+	.payment-image:before{
+		position: absolute;
+		content: url('../../build/images/arrow-rotate.png');
+		bottom: -95px;
+		right: -28px;
+		top: auto;
+		left: auto;
+	}
+
+	.payment-item:nth-child(1) .payment-image:before{
+		display: block;
+	}
+
+	.payment-item:nth-child(3) .payment-image:before{
+		display: none;
+	}	
 
 	.about{
 		display: none;
