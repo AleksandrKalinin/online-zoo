@@ -1,41 +1,89 @@
 /*==========  Desktop First Method  ==========*/
 
-/* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {
+@media only screen and (max-width : 1600px) {
 	
+}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1300px) {
+	.about-inner {
+		max-width: 1160px;
+		width: calc(100%);
+	}
+
+	.about-image, .about-description{
+		max-width: 610px;
+		width: calc(100% / 2 - 50px);
+	}
+
+	.cards {
+		max-width: 1160px;
+		width: calc(100%);
+		justify-content: space-around;
+	}
+
+	.cards-nav__right, .cards-nav__left{
+		display: none;
+	}
+
+	.testimonials-container{
+		max-width: 1160px;
+		width: calc(100%);		
+	}
+
+	.footer-container, .testimonials-button, .footer-button{
+		max-width: 1160px;
+		width: calc(100%);
+	}
 }
 
 
 @media only screen and (max-width : 1000px) {
 
+
+
+	.cards-nav__left, .cards-nav__right{
+		display: flex;
+	}
+
+	.payment-image{
+		width: 168px;
+		height: 168px;
+	}
+
+	.payment-item{
+		width: 168px;
+	}
+
+
 	.wrapper__eagle1 {
-		top: 310px;
-		left: 70px;	
+		top: 51.6%;
+		left: 10%;	
 	}
 
 	.wrapper__eagle2 {
-		top: 340px;
-		left: 120px;
+		top: 48.4%;
+		left: 13%;
 	}
 	.wrapper__gorillas{
-		top: 430px;
-		left: 450px;	
+		top: 67.75%;
+		left: 52.12%;	
 	}
 
 	.wrapper__crocodile{
-		top: 365px;
-		left: 230px;		
-	}
+		top: 57.25%;
+		left: 24.46%;		
 			
 
 	.wrapper__panda {
-		top: 315px;
-		left: 740px;	
+		top: 41.9%;
+		left: 79.9%;	
 	}
 
 	.wrapper__pandas {
-		top: 380px;
-		left: 695px;	
+		top: 51.6%;
+		left: 72.8%;	
 	}
 
 	.wrapper__eagle1 .map-wrapper__descr {
@@ -43,15 +91,14 @@
 		left: 50px;	
 	}
 
-
 	.wrapper__eagle2 .map-wrapper__descr {
 		top: 20px;
 		left: 0;
 	}
 
 	.wrapper__gorillas .map-wrapper__descr {
-		top: 30px;
-		left: 0;	
+		top: -10px;
+		left: 50px;	
 	}
 
 	.wrapper__crocodile .map-wrapper__descr {
@@ -61,7 +108,6 @@
 
 	.wrapper__panda .map-wrapper__descr {
 		top: -30px;
-		left: 30px;	
 	}
 
 	.wrapper__pandas .map-wrapper__descr {
@@ -75,15 +121,21 @@
 	.main-description__background{
 		width: 367px;
 		height: 367px;
+		top: -2%;
+		left: 45.6%;		
+		/*
 		left: 456px;
-		top: -11px;
+		top: -11px; */
 	}
 
 	.main-text{
 		width: 400px;
 		height: 320px;
+		top: 8.7%;
+		left: 51.4%;		
+		/*
 		left: 514px;
-		top: 43px;
+		top: 43px; */
 		font-size: 85px;
 		line-height: 75%;
 		text-align: center;
@@ -105,8 +157,10 @@
 		width: auto;
 	}
 
+
 	.about-inner{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 		margin: 100px 0 142px 0;
 	} 
 
@@ -137,7 +191,8 @@
 	}
 
 	.cards{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.single-card, .card-background, .single-card__hover{
@@ -167,6 +222,11 @@
 		bottom: -200px;
 	}
 
+	.payment-item{
+		max-width: 168px;
+		max-height: 244px;
+	}
+
 	.payment-inner{
 		width: 940px;
 		height: auto;
@@ -193,13 +253,23 @@
 		padding: 0;
 	}
 
+	.payment-inner__container.payment-container{
+		max-width: 760px;
+		width: calc(100%);
+	}
+
+	.payment-container{
+
+	}
+
 	.testimonials{
 		padding: 100px 0 140px;
 		overflow: hidden;
 	}
 
 	.testimonials-container{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.testimonials__title{
@@ -211,11 +281,13 @@
 	}
 
 	.testimonials-item{
-		width: 293px;
+		max-width: 293px;
+		width: calc((100% - 61px) / 3);
 	}
 
 	.testimonials-button{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.scroll-outer, .scroll-inner{
@@ -227,11 +299,13 @@
 	}
 
 	.footer__inner{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.footer-button{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.footer-nav{
@@ -244,7 +318,7 @@
 	.map-container {
 		width: 937px;
 		margin: 90px auto 40px auto;
-		height: 619px;
+		height: auto;
 	}
 
 	.map-container__image{
@@ -268,7 +342,8 @@
 	}
 
 	.donate-inner{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 		padding: 40px 0;
 	}
 
@@ -277,7 +352,8 @@
 	}
 
 	.donate-main{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 		padding: 20px 0 45px 0;
 		align-items: center;
 	}
@@ -287,19 +363,23 @@
 	}
 
 	.donate-select{
-		width: 810px;
+		max-width: 810px;
+		width: 100%;
 	}
 
 	.donate-progress{
-		width: 810px;
+		max-width: 810px;
+		width: 100%;
 	}
 
 	.donate-progress__inner{
-		width: 785px;
+		max-width: 785px;
+		width: calc(100% - 25px);
 	}
 
 	.donate-milestones{
-		width: 830px;
+		max-width: 830px;
+		width: 100%;
 		margin-left: 18px;
 	}
 	.widget-txt{
@@ -311,7 +391,8 @@
 	}
 
 	.donate-sum__wrapper{
-		width: 890px;
+		max-width: 890px;
+		width: 100%;
 	}
 
 	/*animal*/
@@ -346,21 +427,37 @@
 	}
 
 	.animal-about{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.animal-title{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.animal-description{
 		padding-left: 30px;
+		max-width: 485px;
+	}
+
+	.animal-about{
+		position: relative;
+	}
+
+	.animal-thumbnail{
+		max-width: 455px;
+		max-height: 455px;
+		width: calc(100% - 485px);
+
 	}
 
 	.animal-thumbnail__picture{
-		width: 455px;
-		height: 455px;
+		width: 100%;
+		height: auto;
+		display: block;
 	}
+
 
 	.animal-text{
 		font-size: 22px;
@@ -370,11 +467,13 @@
 	}
 
 	.animal__line{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.animal-info{
-		width: 940px;
+		width: calc(100% - 60px);
+		max-width: 940px;
 	}
 
 	.animal-decor__left{
@@ -426,47 +525,64 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-	
+
+	.cards-nav__left, .cards-nav__right{
+		display: none;
+	}
+
+	.main{
+		overflow: hidden;
+	}
+	.main-description__text{
+		font-size: 50px;
+		width: 300px;
+		line-height: 50px;
+	}
+
+	.main-description__button{
+			top: 76.57%;
+			left: 50.18%;
+	}
 
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
 
+	.header-inner{
+		width: 600px;
+	}
+
+	.payment-inner{
+		width: 100%;
+	}
+
+	.payment-image{
+		width: 120px;
+		height: 120px;
+	}
+
+	.payment-item{
+		width: 120px;
+	}
 	
 
 }
 
 @media only screen and (max-width : 640px) {
 
-	.wrapper__eagle1 {
-		top: 170px;
-		left: 40px;	
+
+	.cards-nav__left, .cards-nav__right{
+		display: flex;
 	}
 
-	.wrapper__eagle2 {
-		top: 210px;
-		left: 70px;
-	}
-	.wrapper__gorillas{
-		top: 270px;
-		left: 300px;	
+	.payment-image{
+		width: 168px;
+		height: 168px;
 	}
 
-	.wrapper__crocodile{
-		top: 225px;
-		left: 140px;		
-	}
-			
-
-	.wrapper__panda {
-		top: 150px;
-		left: 470px;	
-	}
-
-	.wrapper__pandas {
-		top: 220px;
-		left: 445px;	
+	.payment-item{
+		width: 168px;
 	}
 
 	.wrapper__eagle1 .map-wrapper__descr {
@@ -500,6 +616,7 @@
 		left: -20px;
 	}
 
+
 	.payment-image{
 		position: relative;
 	}
@@ -510,6 +627,8 @@
 		top: -15px;
 		left: -73px;
 	}
+
+
 
 	.payment-item:nth-child(1) .payment-image:before{
 		display: none;
@@ -562,6 +681,7 @@
 		top: 47px;
 		left: 368px;
 		font-size: 54px;
+		line-height: auto;
 	}
 
 	.main-button{
@@ -586,6 +706,8 @@
 
 	.about-inner{
 		margin: 60px 0 80px;
+		min-height: 400px;
+		height: auto;
 	}
 
 	.about-description__subtitle{
@@ -593,7 +715,8 @@
 	}
 
 	.cards{
-		width: 600px;
+		max-width: 600px;
+		width: calc(100% - 40px);
 	}
 
 	.single-card, .card-background, .single-card__hover{
@@ -653,7 +776,6 @@
 	}
 
 	.payment-inner{
-		width: 640px;
 		padding: 0 20px;
 	}
 
@@ -671,7 +793,14 @@
 	}
 
 	.payment-container{
-		width: 600px;
+		max-width: 600px;
+		width: calc(100%);
+		
+	}
+
+	.payment-inner{
+		max-width: 600px;
+		width: calc(100% - 40px);		
 	}
 
 	.payment-container__icon{
@@ -689,7 +818,8 @@
 	.testimonials-container{
 		flex-direction: column;
 		justify-content: space-between;
-		width: 600px;
+		max-width: 600px;
+		width: 100%;
 		height: 360px;
 		margin: 0 auto 40px;
 	}
@@ -699,6 +829,11 @@
 		height: 109px;
 		overflow: hidden;
 	}
+
+	.testimonials-item{
+		max-width: 100%;
+		width: 100%;
+	}	
 
 	.testimonials-description{
 		height: auto;
@@ -794,7 +929,7 @@
 	.map-container {
 		width: 594px;
 		margin: 90px auto 40px auto;
-		height: 392px;
+		height: auto;
 	}
 
 	.map-container__image{
@@ -814,7 +949,8 @@
 	}
 
 	.donate-inner{
-		width: 600px;
+		max-width: 600px;
+		width: calc(100% - 40px);
 	}
 
 	.donate-inner__title{
@@ -822,7 +958,8 @@
 	}
 
 	.donate-main{
-		width: 600px;
+		max-width: 600px;
+		width: 100%;
 		padding: 20px 0 45px 0;
 		align-items: center;
 	}
@@ -832,21 +969,51 @@
 	}
 
 	.donate-select{
-		width: 580px;
+		max-width: 580px;
+		width: calc(100% - 20px)
 	}
 
 	.donate-progress{
-		width: 600px;
+		max-width: 600px;
+		width: 100%;
 	}
 
 	.donate-progress__inner{
-		width: 525px;
+		max-width: 525px;
+		width: calc(100% - 75px);
 	}
 
 	.donate-milestones{
-		width: 570px;
+		max-width: 570px;
+		width: calc(100% - 30px);
 		margin-left: 18px;
 	}
+
+	.donate-progress__circle:nth-child(6){
+		display: none;
+	}
+
+	.donate-progress__circle:nth-child(7){
+		display: none;
+	}
+
+	.donate-progress__circle:nth-child(8){
+		display: none;
+	}	
+	
+	.single-milestone:nth-child(1){
+		display: none;
+	}
+
+	.single-milestone:nth-child(2){
+		display: none;
+	}
+
+	.single-milestone:nth-child(3){
+		display: none;
+	}		
+
+
 	.widget-txt{
 		width: 159px;
 	}
@@ -856,7 +1023,8 @@
 	}
 
 	.donate-sum__wrapper{
-		width: 580px;
+		max-width: 580px;
+		width: calc(100% - 20px);
 	}	
 
 	.donate-main__subtitle{
@@ -933,7 +1101,8 @@
 	}
 
 	.animal-info{
-		width: 600px;
+		max-width: 600px;
+		width: calc(100% - 40px);
 		margin-top: 60px;
 	}
 
@@ -993,14 +1162,200 @@
 }
 
 
-@media only screen and (max-width : 576px) {
+@media only screen and (max-width : 620px) {
 
+.donate-widget{
+		width: 300px;
+		margin: 0 10px 0;
+	}
+
+	.donate-animal{
+	}
+
+	.donate-animal__image{
+		width: 165px;
+		height: 138px;
+	}
+
+	.widget-descr{
+		margin: 70px 50px 0 0;
+	}
+
+	.widget-txt{
+		width: 90px;
+	}
+
+	.widget-txt__text{
+		font-size: 9px;
+	}
+
+	.widget-txt__number{
+		font-size: 40px;
+		line-height: 32px;
+	}
+
+	.about-flower__image{
+		display: none;
+	}
+
+	.cards{
+		justify-content: center;
+	}
+
+	.cards-nav__left, .cards-nav__right{
+		display: none;
+	}
+
+	.single-card:nth-child(1){
+		margin-bottom: 100px;
+	}
+
+	.single-card:nth-child(2){
+		margin-bottom: 100px;
+	}
+
+	.single-card:nth-child(3){
+		margin-bottom: 100px;
+	}
+
+	.single-card:nth-child(4){
+		margin-bottom: 100px;
+	}	
+
+	.main-text{
+		font-size: 28px;
+		line-height: 30px;
+		width: 160px;
+		left: 43%;
+	}
+
+	.main-description__background{
+		left: 35%;
+	}
+
+	.payment-image{
+		width: 120px;
+		height: 120px;
+	}
+
+	.payment-item{
+		width: 120px;
+	}	
+
+.footer__inner{
+		width: 100%;
+		height: auto;
+	}
+
+	.footer-bottom {
+		flex-direction: column-reverse;
+	}
+
+	.footer-credentials{
+		margin-bottom: 40px;
+	}
+
+	.footer-button{
+		width: 298px;
+		margin: 0 auto 40px auto;
+	}
+
+	.footer-nav{
+		margin: 0 auto;
+	}
+
+	.footer-block__subscribe{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.footer-continer__top{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.footer-top{
+		align-items: center;
+		flex-direction: column;
+		margin-bottom: 40px;
+	}
+
+	.footer-top__logo{
+		display: none;
+	}
+
+	.subscribe{
+		align-items: center;
+	}
+
+	.subscribe-title{
+		font-size: 16px;
+		line-height: 22.4px;
+	}
+
+	.subscribe-form{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 10px;
+	}
+
+	.subscribe-form__mail{
+		margin-bottom: 10px;
+	}
+
+	.subscribe-form__button{
+		margin: 0;
+	}
 	
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.payment-image{
+		width: 168px;
+		height: 168px;
+	}
 
+	.payment-item{
+		width: 168px;
+	}
+
+	.payment-container{
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.payment-image{
+		position: relative;
+	}
+
+	.payment-image:before{
+		position: absolute;
+		content: url('../../build/images/arrow-rotate.png');
+		bottom: -95px;
+		right: -28px;
+		top: auto;
+		left: auto;
+	}
+
+	.payment-item:nth-child(5) .payment-image:before{
+		display: none;
+	}
+
+	.payment-item:nth-child(1) .payment-image:before{
+		display: block;
+	}	
+
+	.payment-item:nth-child(3) .payment-image:before{
+		display: block;
+	}		
+
+	.payment-inner{
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 /* Custom, iPhone Retina */
@@ -1236,17 +1591,6 @@
 		display: none;
 	}
 
-	.main {
-		display: none;
-	}
-
-	.testimonials{
-		display: none;
-	}
-
-	.cards-section{
-		display: none;
-	}
 
 	.payment{
 		
@@ -1265,12 +1609,16 @@
 		left: auto;
 	}
 
-	.payment-item:nth-child(1) .payment-image:before{
-		display: block;
+	.payment-item:nth-child(5) .payment-image:before{
+		display: none;
 	}
 
+	.payment-item:nth-child(1) .payment-image:before{
+		display: block;
+	}	
+
 	.payment-item:nth-child(3) .payment-image:before{
-		display: none;
+		display: block;
 	}	
 
 	.about{
