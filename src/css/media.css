@@ -365,19 +365,23 @@
 	}
 
 	.donate-select{
-		width: 810px;
+		max-width: 810px;
+		width: 100%;
 	}
 
 	.donate-progress{
-		width: 810px;
+		max-width: 810px;
+		width: 100%;
 	}
 
 	.donate-progress__inner{
-		width: 785px;
+		max-width: 785px;
+		width: calc(100% - 25px);
 	}
 
 	.donate-milestones{
-		width: 830px;
+		max-width: 830px;
+		width: 100%;
 		margin-left: 18px;
 	}
 	.widget-txt{
@@ -389,7 +393,8 @@
 	}
 
 	.donate-sum__wrapper{
-		width: 890px;
+		max-width: 890px;
+		width: 100%;
 	}
 
 	/*animal*/
@@ -965,7 +970,8 @@
 	}
 
 	.donate-inner{
-		width: 600px;
+		max-width: 600px;
+		width: calc(100% - 40px);
 	}
 
 	.donate-inner__title{
@@ -973,7 +979,8 @@
 	}
 
 	.donate-main{
-		width: 600px;
+		max-width: 600px;
+		width: 100%;
 		padding: 20px 0 45px 0;
 		align-items: center;
 	}
@@ -983,21 +990,51 @@
 	}
 
 	.donate-select{
-		width: 580px;
+		max-width: 580px;
+		width: calc(100% - 20px)
 	}
 
 	.donate-progress{
-		width: 600px;
+		max-width: 600px;
+		width: 100%;
 	}
 
 	.donate-progress__inner{
-		width: 525px;
+		max-width: 525px;
+		width: calc(100% - 75px);
 	}
 
 	.donate-milestones{
-		width: 570px;
+		max-width: 570px;
+		width: calc(100% - 30px);
 		margin-left: 18px;
 	}
+
+	.donate-progress__circle:nth-child(6){
+		display: none;
+	}
+
+	.donate-progress__circle:nth-child(7){
+		display: none;
+	}
+
+	.donate-progress__circle:nth-child(8){
+		display: none;
+	}	
+	
+	.single-milestone:nth-child(1){
+		display: none;
+	}
+
+	.single-milestone:nth-child(2){
+		display: none;
+	}
+
+	.single-milestone:nth-child(3){
+		display: none;
+	}		
+
+
 	.widget-txt{
 		width: 159px;
 	}
@@ -1007,7 +1044,8 @@
 	}
 
 	.donate-sum__wrapper{
-		width: 580px;
+		max-width: 580px;
+		width: calc(100% - 20px);
 	}	
 
 	.donate-main__subtitle{
@@ -1145,6 +1183,36 @@
 
 
 @media only screen and (max-width : 620px) {
+
+.donate-widget{
+		width: 300px;
+		margin: 0 10px 0;
+	}
+
+	.donate-animal{
+	}
+
+	.donate-animal__image{
+		width: 165px;
+		height: 138px;
+	}
+
+	.widget-descr{
+		margin: 70px 50px 0 0;
+	}
+
+	.widget-txt{
+		width: 90px;
+	}
+
+	.widget-txt__text{
+		font-size: 9px;
+	}
+
+	.widget-txt__number{
+		font-size: 40px;
+		line-height: 32px;
+	}
 
 	.about-flower__image{
 		display: none;
