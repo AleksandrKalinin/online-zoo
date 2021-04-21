@@ -440,12 +440,26 @@
 
 	.animal-description{
 		padding-left: 30px;
+		max-width: 485px;
+	}
+
+	.animal-about{
+		position: relative;
+	}
+
+	.animal-thumbnail{
+		max-width: 455px;
+		max-height: 455px;
+		width: calc(100% - 485px);
+
 	}
 
 	.animal-thumbnail__picture{
-		width: 455px;
-		height: 455px;
+		width: 100%;
+		height: auto;
+		display: block;
 	}
+
 
 	.animal-text{
 		font-size: 22px;
@@ -1122,7 +1136,8 @@
 	}
 
 	.animal-info{
-		width: 600px;
+		max-width: 600px;
+		width: calc(100% - 40px);
 		margin-top: 60px;
 	}
 
