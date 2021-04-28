@@ -236,8 +236,12 @@ header
 
 .single-card
 	width: 366px
-	margin-bottom: 80px
 	position: relative
+	display: none
+	margin-bottom: 80px
+
+.single-card.visible
+	display: block
 
 .single-card:hover .single-card__hover
 	background: rgba(51,51,51,0.8)
@@ -258,8 +262,8 @@ header
 	align-items: center
 	transition: .2s ease
 
-.single-card:nth-child(4),.single-card:nth-child(5), .single-card:nth-child(6)
-	margin-bottom: 0
+.cards-section__inner
+	margin-bottom: -80px
 
 .single-card:hover .card-background__image
 	transform: scale(1.1)
@@ -461,9 +465,12 @@ header
 	display: flex
 	justify-content: space-between
 	margin: 0 auto	
+	overflow: hidden
 
 .testimonials-item
+	display: none
 	width: 266px
+	min-width: 266px
 	height: 391px
 	border-radius: 20px
 	background: #F1F3F2
@@ -471,6 +478,9 @@ header
 	overflow: hidden
 	border: 2px solid #FEBDAB
 	//border-image-source: linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%)
+
+.testimonials-item.visible
+	display: block
 
 .testimonials-top
 	display: flex
@@ -521,6 +531,7 @@ header
 	cursor: pointer
 	border-radius: 5px
 	border: 1px solid #FEBDAB
+	transition: .2s ease
 
 .scroll-outer:active
 	color: #FFA545 	
@@ -1222,6 +1233,7 @@ footer
 	background: url('../images/map_fone.png')
 	background-repeat: repeat
 	position: relative
+	height: auto
 
 
 .map-buttons
@@ -1253,6 +1265,7 @@ footer
 	overflow: hidden
 	margin: 103px auto 120px auto
 	position: relative
+	transition: .3s ease
 
 .map-container__image
 	width: 100%
@@ -1320,12 +1333,6 @@ footer
 .map-wrapper
 	position: absolute				
 
-.map-wrapper:hover .map-wrapper__descr
-	display: block
-
-.map-wrapper__descr:hover
-	display: block
-
 .map-wrapper__descr
 	z-index: 999
 	position: absolute
@@ -1367,3 +1374,26 @@ footer
 
 .burger
 	display: none	
+
+.animal-toggle
+	overflow: hidden
+	transition: .5s ease	
+
+.animal-toggle.toggled
+	height: 260px
+
+
+.animal-carousel__item
+	display: none
+	position: relative
+
+.animal-carousel__item.visible
+	display: block
+
+.animal-item__overlay
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 1

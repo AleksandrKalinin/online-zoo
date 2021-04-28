@@ -84,13 +84,13 @@ function watch(){
 	})
 	gulp.watch('./src/css/**/*.css', compile)
 	gulp.watch('./src/sass/**/*.sass', compile)
-	gulp.watch('./src/js/**/*.js', scripts)
+	//gulp.watch('./src/js/**/*.js', scripts)
 	gulp.watch("./*.html").on("change", browserSync.reload)
 }
 
 gulp.task('styles', styles);
 
-gulp.task('scripts', scripts);
+//gulp.task('scripts', scripts);
 
 gulp.task('sass', compile)
 
