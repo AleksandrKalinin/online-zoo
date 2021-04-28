@@ -47,8 +47,8 @@
 	<section class="animal">
 		<h1 class="animal-header">Alligator camera</h1>
 		<div class=" animal__video animal-video">
-			<div class="animal-video__main">
-				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				
+			<div class="animal-video__main animal-carousel__item visible">
+				<iframe width="100%" height="100%" id="animalMain" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>				
 			</div>
 			<div class="animal-gallery__sidebar animal-sidebar">
 				<div class="animal-sidebar__item sidebar-item">
@@ -89,18 +89,34 @@
 			</div>			
 		</div>
 		<div class="animal__gallery animal-gallery">
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
+			<div class="animal-gallery__item gallery-item animal-carousel__item">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
+			</div>
+			<div class="animal-gallery__item gallery-item animal-carousel__item">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
+			</div>
+			<div class="animal-gallery__item gallery-item animal-carousel__item">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/EnxRJii_dp8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
+			</div>									
 			<div class="gallery-nav__left">
 				<img src="build/images/arrow-left.png">
 			</div>
@@ -151,9 +167,8 @@
 					<p class="animal-block__text">Alligators are awake and feed mostly at night. Younger ones eat insects, shrimp, snails, fish, tadpoles, and frogs. Adults eat fish, birds, turtles, reptiles, and mammals. They swallow their prey whole. Their conical teeth are used to catch their prey without tearing it to pieces. The animal has about 80 teeth; a lost tooth recovers quickly.</p>
 				</div>																
 				<div class="animal__read animal-read">
-					<a id="readButton" class="animal-read__link" href="#">Read Less</a>
-				</div>								
-
+					<button id="readButton" class="animal-read__link">Read Less</button>
+				</div>
 			</div>
 		</div>
 		<img class="animal-decor__left" src="build/images/strelitzia 1 (1).png">

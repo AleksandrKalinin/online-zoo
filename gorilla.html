@@ -47,7 +47,7 @@
 	<section class="animal">
 		<h1 class="animal-header">Gorilla camera</h1>
 		<div class=" animal__video animal-video">
-			<div class="animal-video__main">
+			<div class="animal-video__main animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>			
 			</div>
 			<div class="animal-gallery__sidebar animal-sidebar">
@@ -89,18 +89,34 @@
 			</div>			
 		</div>
 		<div class="animal__gallery animal-gallery">
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
-			<div class="animal-gallery__item gallery-item">
+			<div class="animal-gallery__item gallery-item animal-carousel__item visible">
 				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
 			</div>
+			<div class="animal-gallery__item gallery-item animal-carousel__item">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
+			</div>
+			<div class="animal-gallery__item gallery-item animal-carousel__item">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
+			</div>
+			<div class="animal-gallery__item gallery-item animal-carousel__item">
+				<iframe width="100%" height="100%" src="https://www.youtube.com/embed/rgXWDk7rh4w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<div class="animal-item__overlay"></div>
+			</div>									
 			<div class="gallery-nav__left">
 				<img src="build/images/arrow-left.png">
 			</div>
@@ -167,9 +183,8 @@
 					<p class="animal-block__text">Here at Zoo, we provide a medley of fruits and vegetables to our western lowland gorillas. These include apples, oranges, bananas, raisins, sweet potatoes, cabbage, collards, and primate chow. In the morning, vegetables and fruit are chopped up and <a href="" class="txt__link">scattered </a> around the habitat. From there, the gorillas come outside and forage for their food as they would in the wild. Browse foods including bamboo, banana leaves, mulberry, elm and willow are also scattered in their habitat.</p>					
 				</div>																
 				<div class="animal__read animal-read">
-					<a class="animal-read__link" href="">Read Less</a>
-				</div>								
-
+					<button id="readButton" class="animal-read__link">Read Less</button>
+				</div>
 			</div>
 		</div>
 		<img class="animal-decor__left" src="build/images/strelitzia 1 (1).png">
