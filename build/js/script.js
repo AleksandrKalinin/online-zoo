@@ -243,6 +243,7 @@ if (document.getElementById('mapImage')) {
 		if (mapStep > -3) {
 			mapSize = mapSize / 2;
 			map.style.transform = `scale(${mapSize})`;
+			console.log(mapSize);
 			mapButtons.style.transform = `scale(${1 / mapSize})`;
 			mapStep--;
 		}

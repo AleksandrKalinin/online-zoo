@@ -40,10 +40,9 @@ function compile(){
 		.pipe(autoprefixer({
 			cascade: false
 		}))
-
 		.pipe(cleanCSS({
 			level: 2
-		})) 
+		}))
 	    .pipe(gulp.dest('./build/css'))
 	    .pipe(browserSync.stream())
 }
@@ -54,7 +53,6 @@ function styles(){
 		.pipe(autoprefixer({
 			cascade: false
 		}))
-
 		.pipe(cleanCSS({
 			level: 2
 		}))
@@ -98,6 +96,6 @@ gulp.task('del', clean);
 
 gulp.task('watch', watch);
 
-gulp.task('build', gulp.series(clean, gulp.parallel(compile,scripts)))
+gulp.task('build', gulp.series(clean, gulp.parallel(compile, scripts)))
 
 gulp.task('dev', gulp.series('build', 'watch'));
