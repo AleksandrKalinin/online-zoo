@@ -17,7 +17,7 @@ if (document.getElementById('donateInput')) {
 	      sumEl[j].classList.remove('active');
 	    }
 	    e.target.classList.add('active');
-	    console.log(i);
+	    //console.log(i);
 	    donateInput.value = sums[i];
 	  });
 	}
@@ -55,7 +55,7 @@ if (document.getElementById('donateInput')) {
 if (document.getElementById('readButton')) {
 
 	let readButton = document.getElementById('readButton');
-	console.log(readButton);
+	//console.log(readButton);
 
 	readButton.addEventListener('click', function(e){
 		var animalInfo = document.getElementById('animalInfo');
@@ -93,13 +93,13 @@ if (document.getElementById('readButton')) {
 
 	animalNext.addEventListener('click', function(){
 		animalIndex = (animalIndex !== 3) ? animalIndex + 1 : animalIndex;
-		console.log(animalIndex);
+		//console.log(animalIndex);
 		rotateAnimals(animalIndex);
 	})
 
 	animalPrev.addEventListener('click', function(){
 		animalIndex = (animalIndex !== 0) ? animalIndex - 1 : animalIndex;
-		console.log(animalIndex);
+		//console.log(animalIndex);
 		rotateAnimals(animalIndex);	
 	})
 
@@ -117,7 +117,7 @@ if (document.getElementById('testCont')) {
 	var testIndex = 1;
 	var testTime = 0;
 	var compareTime = 0;
-	console.log(testItems);
+	//console.log(testItems);
 	var testInput = document.getElementById('testInput');
 	testInput.addEventListener('input', function(e){
 		testIndex = Number(e.target.value);
@@ -137,7 +137,7 @@ if (document.getElementById('testCont')) {
 		for (var i = index; i < index + 4; i++) {
 			testItems[i].classList.add('visible');
 		}
-		console.log(testItems);
+		//console.log(testItems);
 	}
 
 	function increaseTime(){
@@ -178,13 +178,13 @@ if (document.getElementById('testCont')) {
 
 	next.addEventListener('click', function(){
 		cardsIndex = (cardsIndex + 6 !== cardsItems.length) ? cardsIndex+=6 : 0;
-		console.log(cardsIndex);
+		//console.log(cardsIndex);
 		rotateCards(cardsIndex);
 	})
 
 	prev.addEventListener('click', function(){
 		cardsIndex = (cardsIndex - 6 !== 0) ? cardsIndex-=6 : 0;
-		console.log(cardsIndex);
+		//console.log(cardsIndex);
 		rotateCards(cardsIndex);	
 	})
 
@@ -207,7 +207,7 @@ if (document.getElementById('mapImage')) {
 
 	outerElement.addEventListener('click', function(e){
 		var evTarget = e.target;
-		console.log(evTarget);
+		//console.log(evTarget);
 		if (evTarget.classList.contains('map-container__icon')) {
 
 		}
@@ -221,7 +221,7 @@ if (document.getElementById('mapImage')) {
 	for (var i = 0; i < mapIcons.length; i++) {
 		mapIcons[i].addEventListener('click', function(e){
 			for (var j = 0; j < mapIcons.length; j++) {
-				console.log(mapIcons[j]);
+				//console.log(mapIcons[j]);
 				mapIcons[j].parentElement.children[1].style.display = 'none';
 			}
 			var tooltip = e.currentTarget.parentElement.children[1];
@@ -243,46 +243,46 @@ if (document.getElementById('mapImage')) {
 		if (mapStep > 0) {
 			mapSize = mapSize / 2;
 			map.style.transform = `scale(${mapSize})`;
-			console.log(mapSize);
+			//console.log(mapSize);
 			//mapButtons.style.transform = `scale(${1 / mapSize})`;
 			mapStep--;
 		}
 	})
 
-	map.addEventListener('mousedown', function(event){
-		let mapWrap = document.getElementById('mapOverflow');
-		let shiftX = event.clientX - map.getBoundingClientRect().left;
-		let shiftY = event.clientY - map.getBoundingClientRect().top;
-		map.style.position = 'absolute';
-		map.style.zIndex = 1000;
-		mapWrap.append(map);
+	let pos = { top: 0, left: 0, x: 0, y: 0 };
+	let mapOver = document.getElementById('mapOverflow');
+	mapOver.scrollTop = 0;
+	mapOver.scrollLeft = 0;
 
-		moveAt(event.pageX, event.pageY);  
+	const mouseDownHandler = function(e) {
+	    pos = {
+	        left: mapOver.scrollLeft,
+	        top: mapOver.scrollTop,
+	        x: e.clientX,
+	        y: e.clientY,
+	    };
+	    mapOver.style.cursor = 'grabbing';
+	    mapOver.style.userSelect = 'none';
+	    document.addEventListener('mousemove', mouseMoveHandler);
+	    document.addEventListener('mouseup', mouseUpHandler);
+	};
 
-		function moveAt(pageX, pageY) {
-		    map.style.left = pageX - shiftX + 'px';
-		    map.style.top = pageY - shiftY + 'px';
-		}
+	const mouseMoveHandler = function(e) {
+	    const dx = e.clientX - pos.x;
+	    const dy = e.clientY - pos.y;
+	    mapOver.scrollTop = pos.top - dy;
+	    mapOver.scrollLeft = pos.left - dx;
+	};	
 
-		function onMouseMove(event) {
-			moveAt(event.pageX, event.pageY);
-		}
+    const mouseUpHandler = function() {
+        mapOver.style.cursor = 'grab';
+        mapOver.style.removeProperty('user-select');
 
-		document.addEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+    };
 
-		map.ondragstart = function() {
-			return false;
-		};
+    mapOver.addEventListener('mousedown', mouseDownHandler);		
 
-	})
-
-	map.addEventListener('mouseup', function(){
-		document.removeEventListener('mousemove', onMouseMove);
-		map.onmouseup = null;
-	})
-
-  // move the ball on mousemove
-
-	
 
 }
