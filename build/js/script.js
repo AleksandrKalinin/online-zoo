@@ -234,19 +234,55 @@ if (document.getElementById('mapImage')) {
 		if (mapStep < 3) {
 			mapSize = mapSize * 2;
 			map.style.transform = `scale(${mapSize})`;
-			mapButtons.style.transform = `scale(${1 / mapSize})`;
+			//mapButtons.style.transform = `scale(${1 / mapSize})`;
 			mapStep++;
 		}
 	})
 
 	downscaleMap.addEventListener('click', function(){
-		if (mapStep > -3) {
+		if (mapStep > 0) {
 			mapSize = mapSize / 2;
 			map.style.transform = `scale(${mapSize})`;
 			console.log(mapSize);
-			mapButtons.style.transform = `scale(${1 / mapSize})`;
+			//mapButtons.style.transform = `scale(${1 / mapSize})`;
 			mapStep--;
 		}
 	})
+
+	map.addEventListener('mousedown', function(event){
+		let mapWrap = document.getElementById('mapOverflow');
+		let shiftX = event.clientX - map.getBoundingClientRect().left;
+		let shiftY = event.clientY - map.getBoundingClientRect().top;
+		map.style.position = 'absolute';
+		map.style.zIndex = 1000;
+		mapWrap.append(map);
+
+		moveAt(event.pageX, event.pageY);  
+
+		function moveAt(pageX, pageY) {
+		    map.style.left = pageX - shiftX + 'px';
+		    map.style.top = pageY - shiftY + 'px';
+		}
+
+		function onMouseMove(event) {
+			moveAt(event.pageX, event.pageY);
+		}
+
+		document.addEventListener('mousemove', onMouseMove);
+
+		map.ondragstart = function() {
+			return false;
+		};
+
+	})
+
+	map.addEventListener('mouseup', function(){
+		document.removeEventListener('mousemove', onMouseMove);
+		map.onmouseup = null;
+	})
+
+  // move the ball on mousemove
+
+	
 
 }
