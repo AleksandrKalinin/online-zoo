@@ -168,23 +168,22 @@ if (document.getElementById('testCont')) {
 
 
 	function rotateCards(index){
-		for (var i = 0; i < cardsItems.length; i++) {
-			cardsItems[i].classList.remove('visible');
-		}	
-		for (var i = index; i < index + 6; i++) {
-			cardsItems[i].classList.add('visible');
-		}
+			console.log(cardsItems.length);
+			for (var i = 0; i < cardsItems.length; i++) {
+				cardsItems[i].classList.remove('visible');
+			}	
+			for (var i = index; i < index + 6; i++) {
+				cardsItems[i].classList.add('visible');
+			}
 	}
 
 	next.addEventListener('click', function(){
 		cardsIndex = (cardsIndex + 6 !== cardsItems.length) ? cardsIndex+=6 : 0;
-		//console.log(cardsIndex);
 		rotateCards(cardsIndex);
 	})
 
 	prev.addEventListener('click', function(){
-		cardsIndex = (cardsIndex - 6 !== 0) ? cardsIndex-=6 : 0;
-		//console.log(cardsIndex);
+		cardsIndex = (cardsIndex - 6 >= 0) ? cardsIndex-=6 : 12;
 		rotateCards(cardsIndex);	
 	})
 
